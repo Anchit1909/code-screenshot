@@ -1,7 +1,8 @@
 import CodeEditor from "@/components/CodeEditor";
 import ExportOptions from "@/components/controls/ExportOptions";
+import ThemeSelect from "@/components/controls/ThemeSelect";
 import { Button } from "@/components/ui/button";
-import { Card } from "@/components/ui/card";
+import { Card, CardContent } from "@/components/ui/card";
 import { cn } from "@/lib/utils";
 import { fonts, themes } from "@/options";
 import useStore from "@/store/store";
@@ -56,7 +57,10 @@ export default function Home() {
         <CodeEditor />
       </div>
       <Card className="fixed bottom-16 py-6 px-8 mx-6 bg-neutral-900/90 backdrop-blur">
-        <ExportOptions targetRef={editorRef} />
+        <CardContent className="flex flex-wrap gap-6 p-0">
+          <ThemeSelect />
+          <ExportOptions targetRef={editorRef} />
+        </CardContent>
       </Card>
     </main>
   );
