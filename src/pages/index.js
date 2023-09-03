@@ -1,13 +1,10 @@
-import Image from "next/image";
-import { Inter } from "next/font/google";
-import { Button } from "@/components/ui/button";
+import CodeEditor from "@/components/CodeEditor";
 
-const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   return (
-    <main>
-      <Button>Click me</Button>
+    <main className="dark min-h-screen flex justify-center items-center bg-neutral-950 text-white">
+      <CodeEditor />
     </main>
   );
 }
