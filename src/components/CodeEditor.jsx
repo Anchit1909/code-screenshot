@@ -2,10 +2,25 @@ import { cn } from "@/lib/utils";
 import { codeSnippets, fonts } from "@/options";
 import useStore from "@/store/store";
 import hljs from "highlight.js";
+import { useEffect } from "react";
 import Editor from "react-simple-code-editor";
 
 function CodeEditor() {
   const store = useStore();
+  useEffect(() => {
+    const randomSnippet =
+      codeSnippets[Math.floor(Math.random() * codeSnippets.length)];
+    useStore.setState(randomSnippet);
+  }, []);
+
+  useEffect(() => {
+    if (store.autoDetectLanguage) {
+      const { language } = flourite(store.code, { noUnknown: true });
+      useStore.setState({
+        language: language.toLowerCase() || "plaintext",
+      });
+    }
+  }, [store.autoDetectLanguage, store.code]);
   return (
     <div
       className={cn(
