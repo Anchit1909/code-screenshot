@@ -1,6 +1,7 @@
 import { cn } from "@/lib/utils";
 import { codeSnippets, fonts } from "@/options";
 import useStore from "@/store/store";
+import flourite from "flourite";
 import hljs from "highlight.js";
 import { useEffect } from "react";
 import Editor from "react-simple-code-editor";
