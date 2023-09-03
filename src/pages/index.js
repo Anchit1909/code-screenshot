@@ -1,8 +1,11 @@
 import CodeEditor from "@/components/CodeEditor";
+import ExportOptions from "@/components/controls/ExportOptions";
+import { Button } from "@/components/ui/button";
+import { Card } from "@/components/ui/card";
 import { cn } from "@/lib/utils";
 import { fonts, themes } from "@/options";
 import useStore from "@/store/store";
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 
 export default function Home() {
   const theme = useStore((state) => state.theme);
@@ -11,6 +14,25 @@ export default function Home() {
   const showBackground = useStore((state) => state.showBackground);
 
   const editorRef = useRef(null);
+
+  //for copy link functionality
+  //If there is some params in the link, then that will be set up as state and that will be returned.
+  //If no params, then normal page will be returned.
+  useEffect(() => {
+    const queryParams = new URLSearchParams(location.search);
+    if (queryParams.size === 0) return;
+    const state = Object.fromEntries(queryParams);
+
+    useStore.setState({
+      ...state,
+      code: state.code ? atob(state.code) : "",
+      autoDetectLanguage: state.autoDetectLanguage === "true",
+      darkMode: state.darkMode === "true",
+      fontSize: Number(state.fontSize || 18),
+      padding: Number(state.padding || 64),
+    });
+  }, []);
+
   return (
     <main className="dark min-h-screen flex justify-center items-center bg-neutral-950 text-white">
       <link
@@ -33,6 +55,9 @@ export default function Home() {
       >
         <CodeEditor />
       </div>
+      <Card className="fixed bottom-16 py-6 px-8 mx-6 bg-neutral-900/90 backdrop-blur">
+        <ExportOptions targetRef={editorRef} />
+      </Card>
     </main>
   );
 }
