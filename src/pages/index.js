@@ -1,5 +1,6 @@
 import CodeEditor from "@/components/CodeEditor";
 import ExportOptions from "@/components/controls/ExportOptions";
+import FontSelect from "@/components/controls/FontSelect";
 import LanguageSelect from "@/components/controls/LanguageSelect";
 import ThemeSelect from "@/components/controls/ThemeSelect";
 import { Button } from "@/components/ui/button";
@@ -61,6 +62,7 @@ export default function Home() {
         <CardContent className="flex flex-wrap gap-6 p-0">
           <ThemeSelect />
           <LanguageSelect />
+          <FontSelect />
           <ExportOptions targetRef={editorRef} />
         </CardContent>
       </Card>
