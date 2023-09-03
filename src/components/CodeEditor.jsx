@@ -58,7 +58,7 @@ function CodeEditor() {
         )}
       >
         <Editor
-          value={codeSnippets[0].code}
+          value={store.code}
           onValueChange={(code) => useStore.setState({ code })}
           highlight={(code) =>
             hljs.highlight(code, { language: store.language || "plaintext" })
