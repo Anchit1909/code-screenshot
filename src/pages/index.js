@@ -1,5 +1,6 @@
 import CodeEditor from "@/components/CodeEditor";
 import BackgroundSwitch from "@/components/controls/BackgroundSwitch";
+import DarkModeSwitch from "@/components/controls/DarkModeSwitch";
 import ExportOptions from "@/components/controls/ExportOptions";
 import FontSelect from "@/components/controls/FontSelect";
 import FontSizeInput from "@/components/controls/FontSizeInput";
@@ -68,6 +69,7 @@ export default function Home() {
           <FontSizeInput />
           <PaddingSlider />
           <BackgroundSwitch />
+          <DarkModeSwitch />
           <ExportOptions targetRef={editorRef} />
         </CardContent>
       </Card>
