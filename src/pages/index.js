@@ -11,6 +11,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { cn } from "@/lib/utils";
 import { fonts, themes } from "@/options";
 import useStore from "@/store/store";
+import { Resizable } from "re-resizable";
 import { useEffect, useRef } from "react";
 
 export default function Home() {
@@ -51,16 +52,21 @@ export default function Home() {
         href={fonts[fontStyle].src}
         crossOrigin="anonymous"
       />
-      <div
-        className={cn(
-          "overflow-hidden mb-2 transition-all ease-out",
-          showBackground ? themes[theme].background : "ring ring-neutral-900"
-        )}
-        style={{ padding }}
-        ref={editorRef}
+      <Resizable
+        enable={{ left: true, right: true }}
+        minWidth={padding * 2 + 400}
       >
-        <CodeEditor />
-      </div>
+        <div
+          className={cn(
+            "overflow-hidden mb-2 transition-all ease-out",
+            showBackground ? themes[theme].background : "ring ring-neutral-900"
+          )}
+          style={{ padding }}
+          ref={editorRef}
+        >
+          <CodeEditor />
+        </div>
+      </Resizable>
       <Card className="fixed bottom-16 py-6 px-8 mx-6 bg-neutral-900/90 backdrop-blur">
         <CardContent className="flex flex-wrap gap-6 p-0">
           <ThemeSelect />
