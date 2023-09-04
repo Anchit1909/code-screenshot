@@ -76,7 +76,10 @@ export default function Home() {
           <PaddingSlider />
           <BackgroundSwitch />
           <DarkModeSwitch />
-          <ExportOptions targetRef={editorRef} />
+          <div className="w-px bg-neutral-800" />
+          <div className="place-self-center">
+            <ExportOptions targetRef={editorRef} />
+          </div>
         </CardContent>
       </Card>
     </main>
