@@ -1,6 +1,7 @@
 import CodeEditor from "@/components/CodeEditor";
 import ExportOptions from "@/components/controls/ExportOptions";
 import FontSelect from "@/components/controls/FontSelect";
+import FontSizeInput from "@/components/controls/FontSizeInput";
 import LanguageSelect from "@/components/controls/LanguageSelect";
 import ThemeSelect from "@/components/controls/ThemeSelect";
 import { Card, CardContent } from "@/components/ui/card";
@@ -62,6 +63,7 @@ export default function Home() {
           <ThemeSelect />
           <LanguageSelect />
           <FontSelect />
+          <FontSizeInput />
           <ExportOptions targetRef={editorRef} />
         </CardContent>
       </Card>
