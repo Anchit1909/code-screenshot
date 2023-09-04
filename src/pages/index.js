@@ -3,6 +3,7 @@ import ExportOptions from "@/components/controls/ExportOptions";
 import FontSelect from "@/components/controls/FontSelect";
 import FontSizeInput from "@/components/controls/FontSizeInput";
 import LanguageSelect from "@/components/controls/LanguageSelect";
+import PaddingSlider from "@/components/controls/PaddingSlider";
 import ThemeSelect from "@/components/controls/ThemeSelect";
 import { Card, CardContent } from "@/components/ui/card";
 import { cn } from "@/lib/utils";
@@ -64,6 +65,7 @@ export default function Home() {
           <LanguageSelect />
           <FontSelect />
           <FontSizeInput />
+          <PaddingSlider />
           <ExportOptions targetRef={editorRef} />
         </CardContent>
       </Card>
