@@ -8,6 +8,7 @@ import Editor from "react-simple-code-editor";
 
 function CodeEditor() {
   const store = useStore();
+
   useEffect(() => {
     const randomSnippet =
       codeSnippets[Math.floor(Math.random() * codeSnippets.length)];
@@ -22,6 +23,7 @@ function CodeEditor() {
       });
     }
   }, [store.autoDetectLanguage, store.code]);
+
   return (
     <div
       className={cn(

@@ -3,7 +3,6 @@ import ExportOptions from "@/components/controls/ExportOptions";
 import FontSelect from "@/components/controls/FontSelect";
 import LanguageSelect from "@/components/controls/LanguageSelect";
 import ThemeSelect from "@/components/controls/ThemeSelect";
-import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { cn } from "@/lib/utils";
 import { fonts, themes } from "@/options";

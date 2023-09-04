@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import {
   Select,
   SelectContent,
@@ -11,6 +11,10 @@ import useStore from "@/store/store";
 import { languages } from "@/options";
 
 function LanguageSelect() {
+  const [isMounted, setIsMounted] = useState(false);
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
   const language = useStore((state) => state.language);
   const autoDetectLanguage = useStore((state) => state.autoDetectLanguage);
 
@@ -21,6 +25,9 @@ function LanguageSelect() {
       useStore.setState({ autoDetectLanguage: false, language });
     }
   };
+
+  if (!isMounted) return null;
+
   return (
     <div>
       <label className="block mb-2 text-xs font-medium text-neutral-400">
