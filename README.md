@@ -1,38 +1,67 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<a href="https://code-screenshot-project.vercel.app/">
+  <img alt="Code Screenshot" src="/public/front-page.png">
+    <h1 align="center">COde Screenshot</h1>
+</a>
 
-## Getting Started
+<p align="center">
+  Share beautiful screenshots of your code on your social media platforms. Built using NextJs, Tailwind CSS and shadcn UI.
+</p>
 
-First, run the development server:
+<p align="center">
+  <a href="https://twitter.com/anchit1909" target="_blank">
+    <img src="https://img.shields.io/twitter/follow/anchit1909?style=flat&label=anchit1909&logo=twitter&color=0bf&logoColor=fff" alt="Anchit Sinha Twitter follower count" />
+  </a>
+  <a href="https://github.com/Anchit1909/aurius-ecommerce-website" target="_blank">
+    <img src="https://img.shields.io/github/stars/Anchit1909/aurius-ecommerce-website?label=Anchit1909%2FAurius" alt="BackToLife repo star count" />
+  </a>
+</p>
+
+<p align="center">
+  <a href="#introduction"><strong>Introduction</strong></a> ·
+  <a href="#how-it-works"><strong>How It Works</strong></a> ·
+  <a href="#tech-stack"><strong>Tech Stack</strong></a> ·
+  <a href="#running-locally"><strong>Running Locally</strong></a> ·
+  <a href="#author"><strong>Author</strong></a>
+</p>
+<br/>
+
+## Introduction
+
+Share beautiful screenshots of your code on your social media platforms. Built using NextJs, Tailwind CSS and shadcn UI.
+
+## How it works
+
+- This app is built using Nextjs, Tailwind CSS and Shadcn UI.
+
+## Tech Stack
+
+- Javascript
+- [NextJS](https://nextjs.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Shadcn](https://ui.shadcn.com/)
+
+## Running Locally
+
+### Cloning the repository to the local machine.
+
+```bash
+git clone
+```
+
+### Installing the dependencies.
+
+```bash
+npm install
+```
+
+### Running the application.
+
+Then, run the application in the command line and it will be available at `http://localhost:3000`.
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Author
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
-
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- Anchit Sinha ([@anchit1909](https://twitter.com/anchit1909))
