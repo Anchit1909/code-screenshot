@@ -1,6 +1,6 @@
 <a href="https://code-screenshot-project.vercel.app/">
   <img alt="Code Screenshot" src="/public/front-page.png">
-    <h1 align="center">COde Screenshot</h1>
+    <h1 align="center">Code Screenshot</h1>
 </a>
 
 <p align="center">
